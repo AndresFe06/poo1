@@ -26,19 +26,20 @@ public class Conductor extends Persona {
 
    public Conductor(){}
 
-    public String mostrarMetas(){
-        String texto = "";
-        int indice = 1;
+   /*Metodo que hace parte de la funcionalidad pago trabajadores que devuevle un string con toda la informacion de las metas del trabajdores */
+   public String mostrarMetas(){
+    StringBuilder texto = new StringBuilder();
+    int indice = 1;
 
-        for (Meta i: this.metaConductor) {
-            if(i.getVerificador() == false){
-                texto += "\n" + "Meta "+ indice + i.toString() + "\n";  //Uso de ligadura dinámica
-                indice++;  
-            }             
+    for (Meta i : this.metaConductor) {
+        if (!i.getVerificador() == false) {
+            texto.append("\nMeta ").append(indice).append(" ").append(i.toString()).append("\n");
+            indice++;
         }
-
-        return texto;
     }
+
+    return texto.toString();
+}
       
 
     @Override
