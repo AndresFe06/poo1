@@ -1310,6 +1310,8 @@ public class Main {
                                     // Validación de que el usuario quiere volver al menú principal.
                                     if(opcionPT4 == 0){
                                         System.out.println("Volviendo al menú principal.\n");
+                                        
+                                        
                                         try {
                                             Thread.sleep(1000);
                                         } catch (InterruptedException o) {
@@ -1319,7 +1321,7 @@ public class Main {
                                     }
 
                                     // Confirmación de que el número está dentro del rango
-                                    if(opcionPT4 < 1 || opcionPT4 > metasTrabajadorNoPagas.size()){
+                                    if(opcionPT4 < 1 || opcionPT4 > metasTrabajadorNoPagas.size()+2){
                                         System.out.println("Escoja un número que esté dentro del rango.\n");
                                         continue;
                                     }
@@ -1377,7 +1379,7 @@ public class Main {
                         if (opcionPT3 != 3){
                             double pagoTotal = pagoPotencial + pagoPorMetas;
                             Fabrica.cuentaBancaria.descontarDinero(pagoTotal);
-                            
+                            trabajadorSeleccionado.recibirSueldo(pagoTotal);
                             System.out.println("Procesando pago...");
                             try {
                                 Thread.sleep(1500);

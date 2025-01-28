@@ -323,29 +323,6 @@ public class Load {
 
   }
 
-    {
-        operario1.setMetaOperario(metaOperario1);
-        operario1.setMetaOperario(metaOperario2);
-        operario1.setMetaOperario(metaOperario3);
-        operario1.setMetaOperario(metaOperario4);
-
-        for(Conductor i: Conductor.getListaConductores()){
-            i.setMetaConductor(metaConductor1);
-            i.setMetaConductor(metaConductor2);
-            i.setMetaConductor(metaConductor3);
-            i.setMetaConductor(metaConductor4);
-        }
-
-        for(Vendedor i : Vendedor.getListaVendedores()){
-            i.setMetaVendedor(metaVendedor1);
-            i.setMetaVendedor(metaVendedor2);
-            i.setMetaVendedor(metaVendedor3);
-            i.setMetaVendedor(metaVendedor4);
-        }
-
-        
-    }
-
     }
 
     public static void cargar(){

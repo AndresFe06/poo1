@@ -16,20 +16,20 @@ public class Vendedor extends Persona {
         //TODO Auto-generated constructor stub
     }
 
+    /*Metodo que hace parte de la funcionalidad pago trabajadores que devuevle un string con toda la informacion de las metas del trabajdores */
     public String mostrarMetas(){
-        String texto = "";
+        StringBuilder texto = new StringBuilder();
         int indice = 1;
-
-        for (Meta i: this.metaVendedor) {
-            if(i.getVerificador() == false){
-                texto += "\n" + "Meta "+ indice + i.toString() + "\n";  //Uso de ligadura dinámica
-                indice++;  
-            }             
+    
+        for (Meta i : this.metaVendedor) {
+            if (!i.getVerificador() == false) {
+                texto.append("\nMeta ").append(indice).append(" ").append(i.toString()).append("\n");
+                indice++;
+            }
         }
-
-        return texto;
+    
+        return texto.toString();
     }
-   
     @Override
     public String toString(){
         String texto = "\nNombre:" + this.getNombre() +
