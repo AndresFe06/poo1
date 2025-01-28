@@ -22,7 +22,7 @@ public class Vendedor extends Persona {
         int indice = 1;
     
         for (Meta i : this.metaVendedor) {
-            if (!i.getVerificador() == false) {
+            if (!i.getVerificador()) {
                 texto.append("\nMeta ").append(indice).append(" ").append(i.toString()).append("\n");
                 indice++;
             }
