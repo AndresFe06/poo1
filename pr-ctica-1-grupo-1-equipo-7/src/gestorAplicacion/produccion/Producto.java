@@ -42,9 +42,7 @@ public class Producto implements Moda, Serializable{
         this.id=totalCreados;
         Producto.listaProductos.add(this);
     }
-    public Producto(){
-        totalCreados++;
-    }
+    
     //este es un constructor de copia para generar un nuevo producto con los mismos atributos de otro producto
     //funcionalidad a la que pertenece: Abastecer tiendas
     public Producto(Producto producto){
@@ -58,6 +56,9 @@ public class Producto implements Moda, Serializable{
         this.devuelto = producto.devuelto;
         totalCreados++;
         this.id=totalCreados;
+    }
+    public Producto(){
+        totalCreados++;
     }
 
 
