@@ -245,10 +245,10 @@ public class Load {
       Meta metaVendedor4 = new Meta("Muy Dificil", 20, 30000);
 
     //Instancias estáticas de las metas para operario
-      Meta metaConductor1 = new Meta("Facil",25, 8000);
-      Meta metaConductor2= new Meta("Normal", 40, 13500);
-      Meta metaConductor3 = new Meta("Dificil", 55, 21000);
-      Meta metaConductor4 = new Meta("Muy Dificil", 70, 28500);
+      Meta metaConductor1 = new Meta("Facil",30, 8000);
+      Meta metaConductor2= new Meta("Normal", 50, 13500);
+      Meta metaConductor3 = new Meta("Dificil", 60, 21000);
+      Meta metaConductor4 = new Meta("Muy Dificil", 100, 28500);
     
     //Factura
      LocalDate fecha = LocalDate.of(2024,10,2);
@@ -259,69 +259,67 @@ public class Load {
      Factura f1 =new Factura(tienda1, cliente1, transporte1, listaProductosTienda1,transporte1.getTipoTransporte().getPrecioEnvio(), fecha);
      Factura f2 =new Factura(tienda2, cliente2, transporte2, listaProductosTienda2,transporte2.getTipoTransporte().getPrecioEnvio(), fecha2);
      Factura f3 =new Factura(tienda2, cliente1, transporte3, listaProductosTienda3,transporte3.getTipoTransporte().getPrecioEnvio(),fecha3);
-     {
-      operario1.setMetaOperario(metaOperario1);
-      operario1.setMetaOperario(metaOperario2);
-      operario1.setMetaOperario(metaOperario3);
-      operario1.setMetaOperario(metaOperario4);
 
-      for(Conductor i: Conductor.getListaConductores()){
-          i.setMetaConductor(metaConductor1);
-          i.setMetaConductor(metaConductor2);
-          i.setMetaConductor(metaConductor3);
-          i.setMetaConductor(metaConductor4);
-      }
+    {
+        operario1.setMetaOperario(metaOperario1);
+        operario1.setMetaOperario(metaOperario2);
+        operario1.setMetaOperario(metaOperario3);
+        operario1.setMetaOperario(metaOperario4);
 
-      for(Vendedor i : Vendedor.getListaVendedores()){
-          i.setMetaVendedor(metaVendedor1);
-          i.setMetaVendedor(metaVendedor2);
-          i.setMetaVendedor(metaVendedor3);
-          i.setMetaVendedor(metaVendedor4);
-      }
-      vendedor1.setCantidadTrabajo(3);
-      vendedor2.setCantidadTrabajo(6);
-      vendedor3.setCantidadTrabajo(11);
-      vendedor1.setIndiceMeta(3);
-      vendedor2.setIndiceMeta(6);
-      vendedor3.setIndiceMeta(11);
+        for(Conductor i: Conductor.getListaConductores()){
+            i.setMetaConductor(metaConductor1);
+            i.setMetaConductor(metaConductor2);
+            i.setMetaConductor(metaConductor3);
+            i.setMetaConductor(metaConductor4);
+        }
 
-      operario1.setCantidadTrabajo(7);
-      operario1.setIndiceMeta(7);
-      
-      conductor1.setCantidadTrabajo(8);
-      conductor1.setIndiceMeta(37);
+        for(Vendedor i : Vendedor.getListaVendedores()){
+            i.setMetaVendedor(metaVendedor1);
+            i.setMetaVendedor(metaVendedor2);
+            i.setMetaVendedor(metaVendedor3);
+            i.setMetaVendedor(metaVendedor4);
+        }
+        vendedor1.setCantidadTrabajo(3);
+        vendedor2.setCantidadTrabajo(6);
+        vendedor3.setCantidadTrabajo(11);
+        vendedor1.setIndiceMeta(3);
+        vendedor2.setIndiceMeta(6);
+        vendedor3.setIndiceMeta(11);
 
-      conductor2.setCantidadTrabajo(12);
-      conductor2.setIndiceMeta(45);
+        operario1.setCantidadTrabajo(7);
+        operario1.setIndiceMeta(7);
+        
+        conductor1.setCantidadTrabajo(8);
+        conductor1.setIndiceMeta(37);
 
-      conductor3.setCantidadTrabajo(5);
-      conductor3.setIndiceMeta(58);
+        conductor2.setCantidadTrabajo(12);
+        conductor2.setIndiceMeta(45);
 
-      conductor4.setCantidadTrabajo(0);
-      conductor4.setIndiceMeta(0);
+        conductor3.setCantidadTrabajo(5);
+        conductor3.setIndiceMeta(58);
 
-      conductor5.setCantidadTrabajo(9);
-      conductor5.setIndiceMeta(28);
+        conductor4.setCantidadTrabajo(0);
+        conductor4.setIndiceMeta(0);
 
-      conductor6.setCantidadTrabajo(3);
-      conductor6.setIndiceMeta(47);
+        conductor5.setCantidadTrabajo(9);
+        conductor5.setIndiceMeta(28);
 
-      conductor7.setCantidadTrabajo(0);
-      conductor7.setIndiceMeta(0);
+        conductor6.setCantidadTrabajo(3);
+        conductor6.setIndiceMeta(47);
 
-      conductor8.setCantidadTrabajo(7);
-      conductor8.setIndiceMeta(69);
+        conductor7.setCantidadTrabajo(0);
+        conductor7.setIndiceMeta(0);
 
-      conductor9.setCantidadTrabajo(13);
-      conductor9.setIndiceMeta(50);
+        conductor8.setCantidadTrabajo(7);
+        conductor8.setIndiceMeta(69);
 
-      conductor10.setCantidadTrabajo(6);
-      conductor10.setIndiceMeta(18);
+        conductor9.setCantidadTrabajo(13);
+        conductor9.setIndiceMeta(50);
 
-      
+        conductor10.setCantidadTrabajo(6);
+        conductor10.setIndiceMeta(18);
 
-
-  }
+    }
 
     }
 
